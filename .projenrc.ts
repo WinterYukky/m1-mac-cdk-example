@@ -1,9 +1,20 @@
 import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkTypeScriptApp({
-  cdkVersion: '2.1.0',
+  cdkVersion: '2.38.1',
   defaultReleaseBranch: 'main',
-  name: 'flutter-dev-on-ec2',
+  name: 'm1-mac',
+  github: false,
   projenrcTs: true,
+  prettier: true,
+  prettierOptions: {
+    settings: {
+      singleQuote: true,
+    },
+  },
+  eslintOptions: {
+    dirs: ['src'],
+    prettier: true,
+  },
 
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
